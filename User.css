@@ -1,0 +1,70 @@
+h1.topic {
+    font-family: Autour One;
+    font-variant: small-caps;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+div.info {
+    font-family: Autour One;
+}
+
+div.exeList {
+    font-family: Autour One;
+}
+
+body {
+    background-image: url('Schedular%20back.png');
+    color: #fada5e;
+    width:100%;
+    height:100%;
+}
+
+div.info > input {
+    padding: 2px;
+    margin: 5px;
+    border-bottom: 2px solid #1d546f;
+    border-right: 3px solid #18596f;
+    border-bottom-right-radius: 15px;
+}
+
+div.info > input#input_ProColor {
+    border-bottom-right-radius: 0px;
+}
+
+div.info #button_Add {
+    margin-left: 60px;
+}
+
+table#table_Process thead {
+    background-color: #b1a296;
+    background-image: -webkit-linear-gradient(bottom, rgb(177, 162, 150) 1.65746%, rgb(194, 202, 208) 93.3702%);
+    min-width: 600px;
+    color: #315066;
+}
+
+table#table_Process tbody#tableBody_Process {
+    background-color: #7395ae;
+    font-size: 25px;
+    text-align: center;
+}
+
+p#para_errorLog {
+    margin: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #ca5a2f;
+    font-size: 20px;
+    text-decoration: overline;
+}
+
+#tableColorcell {
+    padding: 5px ;
+    border: rgba(0, 0, 0, 0);
+    border-width: 10px;
+}
+
+h5 {
+    color: #191970;
+}

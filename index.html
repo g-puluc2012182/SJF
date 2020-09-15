@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+        <title>Equipo 5</title>
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="User.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Allerta+Stencil">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Autour+One">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Asset">
+    </head>
+    <body style="
+                    display:grid;grid-template-columns:5% 4fr 4fr 5%;grid-template-rows:30px 100px auto auto auto 10%;grid-template-areas:'. . . .' '. header header .' '. inputs table .' '. result result .' '. . . .' '. . . .';grid-gap:20px;">
+        <h1 style="grid-area:2 / 2 / 3 / 4;" class="topic">5.	Planificación por Prioridad al más corto (SJF, Short Job First).</h1>
+        <div style="grid-area:3 / 2 / 4 / 3;" class="info">
+            Numero de procesos
+            <input type="number" class="input" id="input_NoProcess" min="1">
+            <button class="btn btn-primary" type="button" id="button_OK" onclick="inputNum()"> OK </button>
+            <br/>
+            <br/>
+            <input type="text" class="input" id="input_ProName" placeholder="Nombre del proceso">
+            <input type="number" class="input" id="input_ProSubTime" placeholder="Tiempo - ciclos de CPU">
+            <input type="number" class="input" id="input_ProBurstTime" placeholder="Tiempo - ciclos de entrada/salida ">
+            <br/>
+            Seleccione un color
+            <input type="color" class="input" id="input_ProColor">
+            <br/>
+            <br/>
+            <!-- <div class="btn-group" role="group" id="buttonGroup_Process"> -->
+            <button class="btn btn-primary" type="button" id="button_Add" disabled="true" onclick="addToArray()">
+                Agregar
+</button>
+            <button class="btn btn-primary" type="button" onclick="Submission()"> Calculate </button>
+            <!-- <button class="btn btn-primary" type="button" id="button_Delete" onclick="deleteFromArray()"> Delete Last Entry </button> -->
+            <br/>
+            <p id="para_errorLog"></p>
+            <!-- </div> -->
+        </div>
+        <div style="grid-area: 3 / 3 / 4 / 4; font-family: Autour One;" class="table">
+            <div class="table-responsive">
+                <table class="table" id="table_Process">
+                    <thead id="tableHead_Process">
+                        <tr>
+                            <th> -Nombre- </th>
+                            <th> -CPU- </th>
+                            <th> -entrada/salida- </th>
+                            <th> -Color- </th>
+                            <th> -Eliminar- </th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody_Process">
+</tbody>
+                </table>
+            </div>
+        </div>
+        <div id="div_exeList" style="grid-area:4 / 2 / 5 / 4;" class="exeList">
+            <h3 id="h3_exeList" class="exeList"></h3>
+            <ul id="list_execution">
+            </ul>
+            <div id="div_calculated_times">
+                <h5 id="h5_turnaround"></h3>
+                <h5 id="h5_waiting"></h3>
+            </div>
+        </div>
+        <div id="div_graph" style="grid-area: 5 / 2 / 6 / 4;">
+            <div id="chartdiv"></div>
+            <style>#chartdiv {
+    width: 100%;
+    height: 500px;
+}</style>
+        </div>
+        <script src="https://www.amcharts.com/lib/4/core.js"></script>
+        <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/dataviz.js"></script>
+        <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="Process.js"></script>
+        <script src="Graph.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="Algorithm.js"></script>
+    </body>
+</html>
